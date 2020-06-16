@@ -6,7 +6,7 @@ class Brand(models.Model):
     # img = DefaultStaticImageField(upload_to='brand_img/', blank=True, default_image_path='images/default_goorm_img.png')
 
     def __str__(self):
-        return self.brd_name
+        return self.name
 
 class Tobacco(models.Model):
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE, related_name='tobacco')
